@@ -24,6 +24,8 @@ header {
     overflow: hidden;
     background-color: rgb(51, 55, 56);
     padding: 20px 10px;
+    position: fixed;
+    width: 100%;
 }
 
 .logo-image {
@@ -40,11 +42,6 @@ header a {
     font-size: 18px;
     line-height: 25px;
     border-radius: 8px;
-}
-
-.facebook {
-    height: 50px;
-    padding: 0%;
 }
 
 header a.logo {
@@ -77,7 +74,7 @@ header a.active {
     }
 }
 
-#Abstract, #Materials {
+#Abstract, #Materials, #Results, #Analysis {
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -94,13 +91,29 @@ h1 {
     text-align: center;
 }
 
-.abstract, .materials {
+.abstract, .materials, .results, .analysis {
     text-align: justify;
     font-size: 125%;
 }
 
 #Materials {
     text-align: center;
+}
+
+.border-break {
+    border: 2px solid black;
+    position: relative;
+    margin: 20px;
+}
+
+.res {
+    display: flex;
+    margin-top: 2%;
+}
+
+.anapic {
+    display: flex;
+    margin-left: 18%;
 }
         </style>
     </head>
@@ -110,43 +123,95 @@ h1 {
                 <img src="icon.png" alt="Team Logo" class="logo-image">
                 <a href="#default" class="logo">S.O.U.Q. | Innovation is our Brand</a>
                 <div class="header-right">
-                    <a class="facebook" href="https://www.facebook.com" target="_blank"><img src="facebook.png" class="facebook"></a>
                     <a class="active" href="index.html">Home</a>
                     <a href="#Abstract">Abstract</a>
                     <a href="#Materials">Materials</a>
                     <a href="#Results">Results</a>
                     <a href="#Analysis">Analysis</a>
-                    <a href="#Discussion">Discussion</a>
+                    <a href="#TestVid">Test Video</a>
                 </div>
             </div>
         </header>
+        <br><br><br>
         <section id="Abstract">
             <h1>Abstract</h1>
             <p class="abstract">
-                This study is going to change the opinion of “buildings,” it encompasses technology along with old ways of construction. 
-                Those implementations have the potential to solve major destructive problems and tackle global threats. Egypt suffers 
-                from major challenges that hinder its growth and advancement. Amongst those challenges are climate change, wastes and 
-                recycling, and a lack of a technological environment. The agricultural sector is by far the most affected sector by those 
-                challenges, where many crops get wasted due to short shelf life that is caused by environmental factors, leading to less 
-                food availability, and causing a less supply-and-demand ratio. “Modern challenges require innovative solutions.” A quote 
-                that best reflects the chosen solution for the mentioned challenge. It is a fruits and vegetables shop made from a 
-                composite of mud and hay, called “Adobe.” It will be monitored by sensors and smart systems that track certain 
-                environmental features. Those sensors are connected to actuators that turn on whenever there is an unpleasing change. 
-                The solution must come up to certain design criteria: low temperature (at least lower by 3 degrees Celsius than its 
-                environment); natural, eco-friendly building materials; the utilization of clean, renewable energy sources; and overall 
-                building safety. The solution was a massive success, with it demolishing the requirements and passing every test. It 
-                promotes crop health and longer shelf life, as well as safety and higher air quality. It presented a  modern and 
-                innovative way of critical thinking and problem-solving strategies that cope with current challenges.
+                This study is going to change the opinion of “buildings,” it encompasses technology along with old ways of construction. Those implementations have the potential to solve major destructive problems and tackle global threats. Egypt suffers from major challenges that hinder its growth and advancement. Amongst those challenges are climate change, wastes and recycling, and a lack of a technological environment. The agricultural sector is by far the most affected sector by those challenges, where many crops get wasted due to short shelf life that is caused by environmental factors, leading to less food availability, and causing a less supply-and-demand ratio. “Modern challenges require innovative solutions.” A quote that best reflects the chosen solution for the mentioned challenge. It is a fruits and vegetables shop made from a composite of mud and hay, called “Adobe.” It will be monitored by sensors and smart systems that track certain environmental features. Those sensors are connected to actuators that turn on whenever there is an unpleasing change. The solution must come up to certain design criteria: low temperature (at least lower by 3 degrees Celsius than its environment); natural, eco-friendly building materials; the utilization of clean, renewable energy sources; and overall building safety. The solution was a massive success, with it demolishing the requirements and passing every test. It promotes crop health and longer shelf life, as well as safety and higher air quality. It presented a  modern and innovative way of critical thinking and problem-solving strategies that cope with current challenges.
             </p>
         </section>
-        <p class="linebreak">------------------------------------</p>
+        <div class="border-break"></div>
         <section id="Materials">
             <h1>Materials</h1>
             <img class="mattable" src="Materials.jpg">
         </section>
-        <p class="linebreak">------------------------------------</p>
+        <div class="border-break"></div>
         <section id="Results">
             <h1>Results</h1>
+            <p class="results">
+                In this section, the results of the project on sensor management and actuator control are presented. Different methods were employed to create a smart, fully monitored environment, and the effectiveness was assessed. Key parameters were measured to determine the extent of effectiveness in getting a functional prototype. All tests were carried out considering safety precautions and security measures, to ensure no harm for either the prototype or the surrounding environment. Firstly, various tests were conducted on the prototype’s interior and compared to the exterior, aiming to provide insight into the environmental features of the interior. Tests on temperature, humidity levels, air quality, and moisture were conducted on the prototype, as well as the detection of flames. The actuators were tested to ensure their functionality and effectiveness in managing the factors listed above.
+            </p>
+            <div class="results">
+                <div class="res" style="margin-left: 10%; margin-right: 10%;">
+                    The temperature: the measuring unit used is Celsius (C), and the time is measured in minutes. It was tested in different times of the day to get different readings for the temperature. Each test lasted 1 minute. The DHT-11 was the utilized sensor.
+                    <img src="temp graph.png" style="width: 20%; margin-left: 2%;">
+                    <img src="temp table.png" style="width: 20%; margin-left: 2%;">
+                </div>
+                <div class="res" style="margin-left: 10%; margin-right: 10%;">
+                    The air quality: it is measured in parts per million (ppm). It was tested by adding a gas to the interior of the building, like butane from lighters, and each test lasted one minute. The used sensor was the MQ-135. The suction fan acts as an actuator for both air quality and humidity; however, it was tested for each one separately.
+                    <img src="air graph.png" style="width: 20%; margin-left: 2%;">
+                    <img src="air table.png" style="width: 20%; margin-left: 2%;">
+                </div>
+                <div class="res" style="margin-left: 10%; margin-right: 10%;">
+                    The flame detector: As the name implies, it the sensor specialized for detecting fires or flames. It reads whether there is a fire or not, and if there is a fire, it signals the water pump to work. The sensor's name is KY-026 module. The test duration is similar to the previous sensors.
+                    <img src="flame graph.png" style="width: 20%; margin-left: 2%;">
+                    <img src="pump graph.png" style="width: 20%; margin-left: 2%;">
+                </div>
+                <div class="res" style="margin-left: 10%; margin-right: 10%;">
+                    Humidity: it is measured as a ratio between the amount of water vapour to the amount of air in the building. It was tested by adding water inside the building and testing the behaviour of the fan.
+                    <img src="hum graph.png" style="width: 20%; margin-left: 2%;">
+                    <img src="hum table.png" style="width: 20%; margin-left: 2%;">
+                </div>
+                <div class="res" style="margin-left: 10%; margin-right: 10%;">
+                    The moisture: it is measured similar to humidity. It is a measure of how much water is within the building. It was tested by spraying water on the building, and since it is made of mud, the water will be absorbed.
+                    <img src="moist graph.png" style="width: 20%; margin-left: 2%;">
+                    <img src="moist table.png" style="width: 20%; margin-left: 2%;">
+                </div>
+            </div>
+            <p class="results">
+                However, there were some negative points during the tests:<br>
+                Adobe has to be made with certain quantities of mud, hay, and water; or else the bricks will crack very fast. For example, there some failed experiments with the quantities that led to it being fragile (Pic 13). The external shape is not the best shape for a building like this as the adobe starts to dry and crack. Additionally, Durability and longevity can be a problem as the adobe building gets eroded over time and cannot handle the environmental impacts. The last one is the reading of the sensors is not stable for a long time due to a small fault in the building.
+                </p>
+        </section>
+        <div class="border-break"></div>
+        <section id="Analysis">
+            <h1>Analysis</h1>
+            <div class="analysis">
+                <p>
+                    This project aims to address critical issues that pose significant health risks, such as the proliferation of bacteria in fruits and vegetables, leading to potentially life-threatening diseases. Additionally, it targets the problem of overcrowded markets and notorious breeding grounds for diseases. Furthermore, the implementation of sensors, including the MQ135 air quality sensor, enables continuous monitoring and purification of the air, eliminating harmful gases that pose health hazards. All these protections are made for the consumers.
+                </p>
+                <br>
+                <h3>Positive and negative results:</h3>
+                <p>
+                    In this section, the results of the project on sensor management and actuator control are presented. Different methods were employed to create a smart, fully monitored environment, and the effectiveness was assessed. Key parameters were measured to determine the extent of effectiveness in getting a functional prototype. All tests were carried out considering safety precautions and security measures. Their results were : The temperature is measured with different conditions to make sure that the main problem is solved. The air quality sensor measures the amount of gases in the air and the test is done by adding gases in the air near the sensor. The used sensor was the MQ-135. The suction fan acts as an actuator for both air quality and humidity; however, it was tested for each one separately. The flame detector: As the name implies, it is the sensor specialized for detecting fires or flames. It detects the flame easily. Humidity: it is measured as a ratio between the amount of water vapor to the amount of air in the building. It was tested by adding water inside the building and testing the behaviour of the fan. Moisture: It is a measure of how much water is within the building. It was tested by spraying water on the building. To make the curtains save the adobe from the water. On the other hand, the project has some negative results: Firstly, the external shape is not the best shape for a building like this as the adobe starts to dry and crack. Additionally, Durability and longevity can be a problem as the adobe building gets eroded over time and cannot handle the environmental impacts, but the solution is the Restoration by new adobe to make the building fresh and modern again. The last one is the reading of the sensors is not stable for a long time due to a small fault in the building or in the formation of adobe.
+                </p>
+                <br>
+                <h3>Egypt's grand challenges:</h3>
+                <p>
+                    Egypt faces three grand challenges: recycling waste for economic and environmental gain, improving scientific and technological education accessibility, and mitigating the impacts of climate change. Recycling initiatives not only reduce landfill usage but also create job opportunities and conserve natural resources, while technological education reform is crucial for Egypt's advancement. Solutions involve enhancing educational systems, providing necessary resources, and increasing public awareness. Climate change exacerbates heatwaves, storms, and sea-level rise in Egypt, threatening agriculture and infrastructure. Pollution and deforestation contribute to these challenges, necessitating adaptation and mitigation efforts. Without intervention, Egypt faces economic losses and increased poverty. Addressing these challenges requires concerted efforts in waste management, education reform, and climate resilience. 
+                </p>
+                <div class="anapic">
+                    <img src="total recycling.png" width="40%" height="40%">
+                    <img src="annual output.png" width="40%" height="40%">
+                </div>
+                <h3>The specific problem:</h3>
+                <p>
+                    Fruits and vegetables are the most crucial forms of food for us. However, many crops get wasted due to the short shelf life that is caused by environmental factors, leading to less food availability, and causing a less supply-and-demand ratio. So, what causes this problem? In local shops, the crops are subject to higher temperatures and humidity levels, which establishes a suitable environment for bacteria to grow and crops to rot. Moreover, they are left in the open air, which means that it is exposed to any harmful gases in the air. It is also prone to being set on fire for any reason, for example, smoking. That project aims to solve all those problems. The aim is to promote more sustainable health and longer shelf life for the crops. The solution accomplishes the design criteria of the project, which are temperature management (the interior must be at least 3 degrees Celsius cooler than the exterior), efficiency, eco-friendliness, and safety. It is a fruits and vegetable shop made from a composite of mud and hay, called “Adobe.” Natural materials are known for their heat insulation properties, which are good for solving the problem of temperature. It will be monitored by sensors and smart systems that track certain environmental features. Those sensors are connected to actuators that turn on whenever there is an unpleasant change.
+                </p>
+            </div>
+        </section>
+        <div class="border-break"></div>
+        <section id="TestVid">
+            <h1>The Test Plan Video</h1>
         </section>
     </body>
 </html>
